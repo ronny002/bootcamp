@@ -394,7 +394,7 @@ mod tests {
             let file_contents = r#"{ "last_item_id": 0 epics: {} stories {} }"#;
             write!(tmpfile, "{}", file_contents).unwrap();
 
-            let file_path = "./data/read_db_should_fail_with_invalid_json.json".to_owned();
+            let file_path = "/tmp/read_db_should_fail_with_invalid_json.json".to_owned();
 
             let path = tmpfile.into_temp_path();
             path.persist(&file_path).unwrap();
@@ -415,7 +415,7 @@ mod tests {
             let file_contents = r#"{ "last_item_id": 0, "epics": {}, "stories": {} }"#;
             write!(tmpfile, "{}", file_contents).unwrap();
 
-            let file_path = "./data/read_db_should_parse_json_file.json".to_owned();
+            let file_path = "/tmp/read_db_should_parse_json_file.json".to_owned();
 
             let path = tmpfile.into_temp_path();
             path.persist(&file_path).unwrap();
@@ -436,7 +436,7 @@ mod tests {
             let file_contents = r#"{ "last_item_id": 0, "epics": {}, "stories": {} }"#;
             write!(tmpfile, "{}", file_contents).unwrap();
 
-            let file_path = "./data/write_db_should_work.json".to_owned();
+            let file_path = "/tmp/write_db_should_work.json".to_owned();
 
             let path = tmpfile.into_temp_path();
             path.persist(&file_path).unwrap();
